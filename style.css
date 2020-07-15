@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700'); 
+body {
+  background:#080e36;;
+  background: -moz-linear-gradient(-45deg, #182a77 0%, #5fc3e4 100%);
+  background: -webkit-linear-gradient(-45deg, #4439ac 0%, #5fc3e4 100%);
+  background: linear-gradient(135deg, #5a269e 0%, #5fc3e4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+}
+/************************************* Style the navbar************************************/
+.nav {
+  margin: 0;
+  font-size: 22px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; 
+  padding: .1em;  
+  flex-wrap:wrap;           /*flex items will wrap onto multiple lines, from top to bottom.*/
+}
+.nav_link {
+  text-decoration: none;
+  color: rgb(250, 250, 248);
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+.nav_link:hover {
+  color: rgb(72, 255, 0);
+  background-color: rgb(11, 4, 114);
+  text-decoration: underline;  
+}
+#navbar {
+  overflow: hidden;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #080e70;
+}
+/***********************************Style the navbar**************************************/
+section{
+  -webkit-flex-direction: column;
+    flex-direction: column;
+}
+/*---------------------------------------Container----------------------------------------*/
+.container { 
+  width: 100%;
+  height: auto;
+  /*overflow: hidden;
+  font-size: 150%;
+  height: 100%;
+  display:block;
+  overflow:auto; */ 
+}
+.row{
+  display:flex;
+  justify-content:center;
+  box-sizing: content-box;   
+}
+/************************************Home Section********************************** */
+#home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.primary-image {
+  float: right;
+}
+.primary-image :hover {
+  opacity: .3;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+/*.button {
+  background-color: #080e70;
+  border: none;
+  padding: 12px 30px;
+  font-size: 20px;
+  border-radius: 6px;
+  position: static;  
+  color:pink;
+  display:flex;
+  justify-content:center;
+  box-sizing: content-box;   
+} */
+
+.tagline{
+  font-size:3rem;
+  color:rgb(255, 238, 6);
+}
+.caption{
+  width:100%;
+  max-width: 100%;
+  position: absolute;
+  top:40%;
+  z-index:1;
+  }
+.pulse{
+  background-color: #080e70;
+  border-radius: 6px; 
+  display:flex;
+  justify-content:center;
+  box-sizing: content-box;   
+}
+/************************************About me Section********************************** */
+#aboutme {
+  background-color: #590eaf;
+  padding-top: 5%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  z-index: -1;
+  color: rgb(241, 234, 240);
+  font-size: larger;
+}
+.column{
+  float:right;
+  font-size: 110%;
+  color:white;
+}
+.secondary-image {
+  float: left;
+  opacity:0.1;
+  size:0.5;
+}
+/************************************Projects Section********************************** */
+#services {
+  padding-top: 5%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /*background-color: #151616;*/
+  display: table;
+  background: rgb(66, 5, 134); 
+  z-index: -1;
+  /*background-image: url(https://source.unsplash.com/random); */
+}
+.col-sm-4{       /*NB:--->The Bootstrap grid system has four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops).*/
+  margin: 20px;
+  color:rgb(157, 255, 0);
+  font-size: 130%;
+  box-shadow: 0 8px 16px 0 rgba(227, 231, 8, 0.644);
+  background: -moz-linear-gradient(-45deg, #182a77 0%, #793494 100%);
+  background: -webkit-linear-gradient(-45deg, #4439ac 0%, #e45fce 100%);
+  background: linear-gradient(135deg, #5a269e 0%, #833aa5 100%);
+}
+/************************************Projects Section********************************** */
+#projects {
+  padding-top: 5%;
+  position: static;      /*Static positioning  will remain in the natural flow of the page. It will NOT act as anchor point for the absolutely positioned elements*/
+  width: 100%; 
+  /*z-index: -1; */
+}
+.rowrow{                      /*Enables images to overflow into the next line*/
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;        
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255, 254, 254, 0.87);
+  transition: 0.3s;
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;   
+  margin: 20px;  
+  position: static;
+}  
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.555);
+} 
+.poster {
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  overflow: hidden;  
+}
+.poster .link {
+  margin: 1%;
+  display: block;
+  text-decoration: none;    
+  position: relative;
+  /*background: rgb(105, 155, 231);*/
+}
+.poster .link:hover .image-size{
+  opacity: .3;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+} /******************enables image to scale and zoom downwards. Also enhances opacity*****************/
+.poster .link:hover .project-info {
+  opacity: 1;
+  background-color: rgb(20, 4, 255);
+}
+.poster .image-size {
+  width: 400px;
+  height: 300px;
+  opacity: 1;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.poster .project-info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  font-size: 1.4em;
+  color: rgb(255, 255, 255);
+  text-align: center;  
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+/************************************Contacts Section********************************** */
+#contacts {
+  width: 100%;  
+  flex-flow: row wrap;
+  border: 0;
+  text-align: center;  
+  padding-bottom: 60px;
+  color: rgb(247, 246, 241);
+}
+.social_links {
+  font-size: 70%;
+  display: flex; 
+  justify-content: center;
+  text-align: center;  
+}  
+.social_links a{
+  margin:10px;
+  color: #041044;
+}
+.social_links a :hover{
+  color:blue;
+}
+footer {  
+  background: #e55d87;
+  background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+  background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+  background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1);  
+  box-sizing: border-box;
+}
+/***********************************Footer Section****************************************/
+h1,h2,h3.heading  {
+      text-align: center;
+      text-transform:uppercase;
+      font-size:1.9rem;
+      color: rgb(238, 234, 229);      
+      margin-bottom: 1.9rem; 
+      margin-top:.5rem 1.1rem; 
+    }      
+h4{font-size:2rem;}
+/********************************@media******************************/
+@media only screen and (max-width: 600px) and (min-width: 400px){
+  .caption .nav #header #projects #navbar{
+    width:100%;    
+    overflow:auto;
+    top:30%;    
+  }
+  }
